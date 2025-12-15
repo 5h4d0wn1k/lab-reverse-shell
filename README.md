@@ -101,43 +101,37 @@ shell> pwd
 
 shell> ls -la
 total 24
-drwxr-xr-x 2 user user 4096 Jan 1 12:00 .
+drwxr-xr-x 2 user user 4096 Dec 15 10:00 .
 ...
-
-shell> exit
 ```
 
-## Security Implications
+## Security Warnings
 
-This tool demonstrates:
-- **Reverse Shells**: How attackers establish remote access
-- **Command Execution**: Remote command execution techniques
-- **Network Communication**: TCP-based command and control
-- **Detection**: Importance of monitoring network connections
+⚠️ **CRITICAL**: This tool is for LAB USE ONLY.
 
-## Lab Setup Requirements
-
-- **Isolated Network**: Use isolated lab network only
-- **No Internet Access**: Do not expose to internet
-- **Controlled Environment**: Only use in controlled lab environments
-- **Authorization**: Only use with explicit authorization
+- **NEVER** expose listener to the internet
+- **ONLY** use in isolated lab environments
+- **ONLY** use on systems you own
+- **NEVER** use on production systems
+- Unauthorized access is illegal
 
 ## Use Cases
 
 - **Security Training**: Learn about reverse shell techniques
 - **Lab Exercises**: Practice in isolated lab environments
-- **Educational Purposes**: Understand reverse shell attack vectors
-- **Detection Testing**: Test detection mechanisms
+- **Educational Purposes**: Understand reverse shell mechanics
+- **Penetration Testing**: Authorized security assessments
 
 ## Legal Disclaimer
 
-⚠️ **CRITICAL**: This tool is for LAB USE ONLY in isolated environments.
+⚠️ **IMPORTANT**: This tool is for lab use and educational purposes only.
 
-- **NEVER** deploy outside your lab
-- **NEVER** expose to the internet
-- **NEVER** use on systems you don't own or have permission to test
-- **ONLY** use in isolated lab environments
-- Unauthorized remote access is illegal
+- Only use in isolated lab environments
+- Only use on systems you own
+- Never expose to the internet
+- Never use on production systems
+- Unauthorized access is illegal
+- Comply with all applicable laws and regulations
 
 ## Contributing
 
@@ -154,4 +148,4 @@ This project is for educational purposes only. Use responsibly and ethically.
 
 ---
 
-**CRITICAL**: LAB USE ONLY - Never deploy outside your lab or expose to the internet!
+**CRITICAL**: LAB USE ONLY - Never expose to the internet or use on production systems!
